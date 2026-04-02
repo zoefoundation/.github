@@ -1,4 +1,4 @@
-## Zoe Foundation
+## What is Zoe
 
 Zoe is an open-source attempt to make media trust survive the internet.
 
