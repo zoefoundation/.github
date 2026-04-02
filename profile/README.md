@@ -79,17 +79,17 @@ Everything is public and open-source.
 
 ## Roadmap
 
-- [X] Protocol specification
+- [X] Protocol specification 
   Define the core protocol.
 
-- [X] Build the backend
+- [X] Build the backend 
   Built a backend that is able to challenge devices registration to ensure only authorized devices go trough, and store proofs.
 
 - [X] iOS App [released in TestFlight, soon App Store]
   Built an iOS app that is able to receive challenges, use secure enclave to store a certificate, sign proofs and upload the proofs and verify existing contents. It supports also proof check of imported content.
 
 - [X] JS library for verification [in-progress]
-  Drafted a basic version of the verification JS Library available for testing [on our website](https://zoe-foundation.com) 
+  Drafted a basic version of the verification JS Library available for testing on our [website](https://zoe-foundation.com) 
   
 - [ ] Protocol V2 specification  [in progress]
   Define the V2 protocol and a basic federation model to decentralize the product and make it resilient conversion/resizing/change of format.
