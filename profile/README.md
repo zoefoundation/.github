@@ -23,8 +23,6 @@ In practice, Zoe is split into two public codebases:
 - [zoe-ios](https://github.com/zoefoundation/zoe-ios): the iPhone app for capture, signing, library management, and verification
 - [zoe-backend](https://github.com/zoefoundation/zoe-backend): the FastAPI and PostgreSQL backend for registration, proof storage, and verification
 
-You can also see the public site at [zoe-foundation.web.app](https://zoe-foundation.web.app).
-
 ## Current direction
 
 Zoe is still an early-stage prototype. The current architecture is built around detached proof bundles, server-backed verification, and a deliberately limited trust model rather than broad claims about "truth" in media.
