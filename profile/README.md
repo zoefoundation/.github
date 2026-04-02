@@ -79,37 +79,37 @@ Everything is public and open-source.
 
 ## Roadmap
 
-- [X] Protocol specification 
+- [X] **Protocol specification**<br> 
   Define the core protocol.
 
-- [X] Build the backend 
+- [X] **Build the backend**<br> 
   Built a backend that is able to challenge devices registration to ensure only authorized devices go trough, and store proofs.
 
-- [X] iOS App [released in TestFlight, soon App Store]
+- [X] **iOS App** [released in TestFlight, soon App Store]<br>
   Built an iOS app that is able to receive challenges, use secure enclave to store a certificate, sign proofs and upload the proofs and verify existing contents. It supports also proof check of imported content.
 
-- [X] JS library for verification [in-progress]
+- [X] **JS library for verification** [in-progress]<br>
   Drafted a basic version of the verification JS Library available for testing on our [website](https://zoe-foundation.com) 
   
-- [ ] Protocol V2 specification  [in progress]
+- [ ] **Protocol V2 specification**  [in progress]<br>
   Define the V2 protocol and a basic federation model to decentralize the product and make it resilient conversion/resizing/change of format.
 
-- [ ] ISCC integration  
+- [ ] **ISCC integration<**br>  
   Add similarity-based fingerprints to handle compression, edits, and re-encoding.
 
-- [ ] Swift SDK  
+- [ ] **Swift SDK**<br>  
   Extract capture, signing, and proof generation into a reusable library.
 
-- [ ] V2 Python backend  
+- [ ] **V2 Python backend**<br>  
   Provide a self-hostable backend which supports witnesses and multi-hosting for registration, storage, and verification.
 
-- [ ] Android SDK  
+- [ ] **Android SDK**<br>  
   Extract capture, signing, and proof generation into a reusable library (only for Android devices with hardware signing).
 
-- [ ] JavaScript verification library
+- [ ] **JavaScript verification library**<br>
   Verify media content against a proof registry. Easy to integrate for web apps.
 
-- [ ] C2PA integration
+- [ ] **C2PA integration**<br>
   Extended support for C2PA content credentials.
 
 ---
