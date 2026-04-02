@@ -100,8 +100,8 @@ Everything is public and open-source.
 - [ ] Swift SDK  
   Extract capture, signing, and proof generation into a reusable library.
 
-- [ ] Python backend  
-  Provide a self-hostable backend for registration, storage, and verification.
+- [ ] V2 Python backend  
+  Provide a self-hostable backend which supports witnesses and multi-hosting for registration, storage, and verification.
 
 - [ ] Documentation + security audit  
   Complete docs, end-to-end tests, and third-party audit.
