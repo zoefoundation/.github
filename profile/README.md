@@ -94,16 +94,16 @@ Everything is public and open-source.
 - [ ] **Protocol V2 specification**  [in progress]<br>
   Define the V2 protocol and a basic federation model to decentralize the product and make it resilient conversion/resizing/change of format.
 
-- [ ] **ISCC integration<**br>  
+- [ ] **ISCC integration**<br>
   Add similarity-based fingerprints to handle compression, edits, and re-encoding.
 
-- [ ] **Swift SDK**<br>  
-  Extract capture, signing, and proof generation into a reusable library.
+- [ ] **Swift SDK**<br>
+ Extract capture, signing, and proof generation into a reusable library.
 
-- [ ] **V2 Python backend**<br>  
+- [ ] **V2 Python backend**<br>
   Provide a self-hostable backend which supports witnesses and multi-hosting for registration, storage, and verification.
 
-- [ ] **Android SDK**<br>  
+- [ ] **Android SDK**<br>
   Extract capture, signing, and proof generation into a reusable library (only for Android devices with hardware signing).
 
 - [ ] **JavaScript verification library**<br>
