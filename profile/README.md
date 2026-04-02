@@ -92,7 +92,7 @@ Everything is public and open-source.
   Drafted a basic version of the verification JS Library available for testing [on our website](https://zoe-foundation.com) 
   
 - [ ] Protocol V2 specification  [in progress]
-  Define the V2 protocol and federation model to decentralize the product and make it resilient conversion/resizing/change of format.
+  Define the V2 protocol and a basic federation model to decentralize the product and make it resilient conversion/resizing/change of format.
 
 - [ ] ISCC integration  
   Add similarity-based fingerprints to handle compression, edits, and re-encoding.
@@ -103,16 +103,20 @@ Everything is public and open-source.
 - [ ] V2 Python backend  
   Provide a self-hostable backend which supports witnesses and multi-hosting for registration, storage, and verification.
 
-- [ ] Documentation + security audit  
-  Complete docs, end-to-end tests, and third-party audit.
+- [ ] Android SDK  
+  Extract capture, signing, and proof generation into a reusable library (only for Android devices with hardware signing).
+
+- [ ] JavaScript verification library
+  Verify media content against a proof registry. Easy to integrate for web apps.
+
+- [ ] C2PA integration
+  Extended support for C2PA content credentials.
 
 ---
 
-## Stretch goals
+## Audits
 
-- [ ] JavaScript verification library
-- [ ] Semantic content matching (experimental)
-- [ ] Other ecosystems support
+Before marking a library/SDK as safe to use, we will perform a 3rd party audit to ensure code safety, protocol integrity and adherence to modern programming standards.
 
 ---
 
