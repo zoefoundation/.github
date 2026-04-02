@@ -1,8 +1,8 @@
 ## What is Zoe
 
-Zoe is an open-source attempt to make media trust survive the internet.
+Zoe is an open-source attempt to restore media trust on the internet.
 
-Photos and videos don’t stay intact anymore. They get compressed, stripped, edited, and reshared until whatever proof they once had is gone.
+Photos and videos don’t stay intact anymore. They get compressed, stripped, edited, and reshared until any trace of their origin is gone.
 
 Zoe doesn’t try to solve “truth.”  
 It solves something narrower and actually achievable:
@@ -65,15 +65,15 @@ These are active areas of research and development.
 
 ## Architecture
 
-Zoe is split into two parts:
+Currently, Zoe's codebase is split into two parts:
 
 - [zoe-ios](https://github.com/zoefoundation/zoe-ios)  
-  Capture, signing, local library, verification  
+  An iOS app that supports the full flow (capture & sign media, verify with backend)  
 
 - [zoe-backend](https://github.com/zoefoundation/zoe-backend)  
-  Device registration, proof storage, verification  
+  A Python backend that supports: device registration, proof storage & verification  
 
-Everything is public and open-source.
+More ecosystems are to come. Everything is public and open-source.
 
 ---
 
