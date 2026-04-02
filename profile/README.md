@@ -1,28 +1,127 @@
-# Zoe Foundation
+## Zoe Foundation
 
-Zoe is an open-source attempt to make photo and video provenance more practical for real users.
+Zoe is an open-source attempt to make media trust survive the internet.
 
-The project is focused on a narrow claim: a file was captured through the Zoe workflow on Apple hardware, and the file has not changed since Zoe signed it. It is not trying to prove that a scene was truthful, unstaged, or free from context manipulation.
+Photos and videos don’t stay intact anymore. They get compressed, stripped, edited, and reshared until whatever proof they once had is gone.
 
-## What problem Zoe tries to solve
+Zoe doesn’t try to solve “truth.”  
+It solves something narrower and actually achievable:
 
-Digital media is easy to copy, edit, and repost without trustworthy context. Zoe explores a simpler answer to that problem:
+**Was this file captured on a real device, and has it stayed unchanged since?**
 
-- capture media inside a dedicated iOS app
-- create a device-bound signing key in the Secure Enclave
-- register that device with Apple App Attest
-- generate a signed proof bundle for the final file
-- verify that proof later against the backend
+That’s it.
+
+---
+
+## What Zoe tries to fix
+
+Right now, media loses its origin the moment it moves.
+
+A photo might start real, but after a few uploads, screenshots, or edits, there’s no reliable way to trace it back.
+
+Zoe introduces a simple constraint:
+
+- capture media inside a controlled app
+- bind it to a hardware-backed identity
+- sign the final file at the moment of capture
+- keep a verifiable proof that exists independently of the file
+
+No claims about intent.  
+No claims about context.  
+Just a verifiable origin.
+
+---
 
 ## How Zoe works
 
 ![Zoe platform flow](./platform-flow.svg)
 
-In practice, Zoe is split into two public codebases:
+When you capture media with Zoe:
 
-- [zoe-ios](https://github.com/zoefoundation/zoe-ios): the iPhone app for capture, signing, library management, and verification
-- [zoe-backend](https://github.com/zoefoundation/zoe-backend): the FastAPI and PostgreSQL backend for registration, proof storage, and verification
+- a signing key is created inside the Secure Enclave  
+- the device is verified using Apple App Attest  
+- the file is hashed and signed at capture  
+- a detached proof bundle is generated  
+- that proof can later be verified against the backend  
+
+This guarantees:
+
+- the media was captured through the Zoe app  
+- the file has not been modified since signing  
+
+---
+
+## What Zoe does NOT do (yet)
+
+Zoe does not currently:
+
+- track media across compression or format changes  
+- reconnect screenshots or edited versions to the original  
+- survive transformations outside exact file matching  
+
+These are active areas of research and development.
+
+---
+
+## Architecture
+
+Zoe is split into two parts:
+
+- [zoe-ios](https://github.com/zoefoundation/zoe-ios)  
+  Capture, signing, local library, verification  
+
+- [zoe-backend](https://github.com/zoefoundation/zoe-backend)  
+  Device registration, proof storage, verification  
+
+Everything is public and open-source.
+
+---
+
+## Roadmap
+
+- [X] Protocol specification
+  Define the core protocol.
+
+- [X] Build the backend
+  Built a backend that is able to challenge devices registration to ensure only authorized devices go trough, and store proofs.
+
+- [X] iOS App [released in TestFlight, soon App Store]
+  Built an iOS app that is able to receive challenges, use secure enclave to store a certificate, sign proofs and upload the proofs and verify existing contents. It supports also proof check of imported content.
+
+- [X] JS library for verification [in-progress]
+  Drafted a basic version of the verification JS Library available for testing [on our website](https://zoe-foundation.com) 
+  
+- [ ] Protocol V2 specification  [in progress]
+  Define the V2 protocol and federation model to decentralize the product and make it resilient conversion/resizing/change of format.
+
+- [ ] ISCC integration  
+  Add similarity-based fingerprints to handle compression, edits, and re-encoding.
+
+- [ ] Swift SDK  
+  Extract capture, signing, and proof generation into a reusable library.
+
+- [ ] Python backend  
+  Provide a self-hostable backend for registration, storage, and verification.
+
+- [ ] Documentation + security audit  
+  Complete docs, end-to-end tests, and third-party audit.
+
+---
+
+## Stretch goals
+
+- [ ] JavaScript verification library
+- [ ] Semantic content matching (experimental)
+- [ ] Other ecosystems support
+
+---
 
 ## Current direction
 
-Zoe is still an early-stage prototype. The current architecture is built around detached proof bundles, server-backed verification, and a deliberately limited trust model rather than broad claims about "truth" in media.
+Zoe is an early prototype.
+
+The focus right now is not scale or hype, but correctness:
+
+- minimal claims  
+- verifiable guarantees  
+- clear trust boundaries  
